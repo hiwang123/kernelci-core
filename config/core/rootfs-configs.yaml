@@ -1,4 +1,21 @@
 rootfs_configs:
+  bullseye-libcamera:
+    rootfs_type: debos
+    debian_release: bullseye
+    arch_list:
+      - amd64
+      - arm64
+      - armhf
+    extra_packages:
+      - ca-certificates
+      - libevent-dev
+    extra_packages_remove:
+      - bash
+      - e2fslibs
+      - e2fsprogs
+    script: "scripts/bullseye-libcamera.sh"
+    # test_overlay: "overlays/libcamera"
+
   buster:
     rootfs_type: debos
     debian_release: buster

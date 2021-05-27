@@ -148,6 +148,7 @@ rootfs_configs:
       - libasound2
       - libelf1
       - libjpeg62-turbo
+      - libnuma-dev
       - libudev1
     extra_packages_remove:
       - bash
